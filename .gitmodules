@@ -1,6 +1,3 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/gensimone/neovim
-[submodule ".local/bin/dwm-sb"]
-	path = .local/bin/dwm-sb
-	url = https://github.com/gensimone/dwm-sb
