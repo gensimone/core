@@ -1,6 +1,6 @@
 #!/bin/bash
-#
-# Author: Simone Gentili
+
+# Author: Simone Gentili (gensimone)
 
 cat <<EOF | sudo tee /etc/default/grub 1>/dev/null
 #  ██████╗ ██████╗ ██╗   ██╗██████╗

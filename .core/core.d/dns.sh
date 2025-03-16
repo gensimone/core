@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # Author: Simone Gentili (gensimone)
 
 cat <<EOF | sudo tee /etc/resolv.conf 1>/dev/null

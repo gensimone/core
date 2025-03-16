@@ -7,6 +7,8 @@
 # ██╔╝ ██╗╚██████╔╝██║  ██║╚██████╔╝
 # ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 
+# Author: Simone Gentili (gensimone)
+
 sudo mkdir -p /etc/X11/xorg.conf.d
 
 # Keyboard: caps lock as ctrl
