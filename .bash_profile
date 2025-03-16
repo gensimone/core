@@ -31,4 +31,4 @@ export MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export EDITOR=vim
 
-[ -f "$HOME/.sbash_profile" ] && . "$HOME/.sbash_profile"
+[ -f "$HOME/.distro/.sbash_profile" ] && . "$HOME/.distro/.sbash_profile"
