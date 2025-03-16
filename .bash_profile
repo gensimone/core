@@ -17,7 +17,6 @@ appendpath () {
     esac
 }
 appendpath "$HOME/.local/bin"
-appendpath "$HOME/.local/bin/dwm-sb"
 unset appendpath
 
 # XDG Base Directory Specification
@@ -33,4 +32,4 @@ export XINITRC="$XDG_CONFIG_HOME/xinit/xinitrc"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export EDITOR=vim
 
-[ -z "$DISPLAY" ] && exec startx
+[ -f "$HOME/.sbash_profile" ] && . "$HOME/.sbash_profile"
