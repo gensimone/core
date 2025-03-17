@@ -9,7 +9,7 @@
 
 # Author: Simone Gentili (gensimone)
 
-here="$(dirname "$0")"
+here="$(cd "$(dirname "$0")" || exit 1; pwd -P)"
 
 # Utility function that iterates over the lines of
 # the file at path $1 and invokes the $2 function
