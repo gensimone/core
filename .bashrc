@@ -32,4 +32,4 @@ eval "$(starship init bash)"
 
 set -o vi
 
-[ -f "$HOME/.distro/.sbashrc" ] && . "$HOME/.distro/sbashrc"
+[ -f "$HOME/.distro/.sbashrc" ] && . "$HOME/.distro/.sbashrc"
