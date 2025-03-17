@@ -6,7 +6,7 @@
 # ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
 
 [general]
-import = [ "~/.config/alacritty/kanagawa-dragon.toml" ]
+import = [ "~/.config/alacritty/gruvbox.toml" ]
 
 [window]
 opacity = 1.0
