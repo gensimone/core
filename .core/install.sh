@@ -20,7 +20,7 @@ exec_func() {
     if ! [[ "$line" =~ ^[[:space:]]*# ]]; then
       "$2" "$line"
     fi
-  done < "$here/$1"
+  done < "$1"
 }
 
 # Create $HOME/ dirs
