@@ -1,0 +1,23 @@
+#!/bin/bash
+
+CWD="$(pwd)"
+
+if ! [ -d "$1" ] || ! [ -d "$1/.git" ]; then
+  echo "Provide a local git repository" >&2
+  exit 1
+fi
+
+if ! cd "$1"; then
+  echo "Cannot cd in $0" >&2
+  echo "Missing execution permissions ?" >&2
+  exit 1
+fi
+
+if ! [ "$(git remote)" ]; then
+  echo "Missing remote server" >&2
+  exit 1
+fi
+
+git pull && $EDITOR . && git add . && git commit -m 'Update' && git push
+
+cd "$CWD" || exit 1
