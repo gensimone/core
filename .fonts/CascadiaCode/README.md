@@ -6,17 +6,30 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# Terminus
+# Cascadia Code
 
-**Terminus TTF** is a TrueType version of Terminus Font, a fixed-width bitmap font optimized for long work with computers.
+**Cascadia Code** is a fun, new monospaced font that includes programming ligatures.
 
-https://terminus-font.sourceforge.net/
+For more information have a look at the upstream website: https://github.com/microsoft/cascadia-code
 
-For more information have a look at the upstream website: https://files.ax86.net/terminus-ttf/
+Note that upstream has a version with Nerd Font icons: CascadiaCodeNF. That has not been created with the Nerd Fonts `font-patcher`.
 
-Version: 4.49.3
+## Preprocessed Source Font
 
-## Why `Terminess` and not `Terminus`?
+This source font has been preprocessed - it is not taken directly from upstream.
+Cascadia Code is mainly a variable font (VF) and the static versions (that Nerd Fonts
+are based on) are prepared in a different way: They have been hinted with `ttfautohint`.
+That hints differ considerably from the hints in the VF. That changes the rendering for
+smaller sizes (usual sizes in terminals) considerably.
+
+To get the 'original' (i.e. VF) feel of the font we redo the hints in the static versions:
+Open the font with Microsoft's VisualTrueType (VTT) and apply Light Latin Autohint.
+The issue is known upstream and will probably be fixed. But until it is fixed we need
+to do this manual process on all source updates.
+
+Version: 2111.01
+
+## Why `CaskaydiaCove` and not `Cascadia Code`?
 
 What's in a name? The reason for the name change is to comply with the SIL Open Font License (OFL), in particular the [Reserved Font Name mechanism][SIL-RFN]
 
