@@ -21,7 +21,7 @@ normal = { family = "CascadiaCove NF", style = "Regular"  }
 bold = { family = "CascadiaCove NF", style = "Bold"  }
 italic = { family = "CascadiaCove NF", style = "Italic"  }
 bold_italic = { family = "CascadiaCove NF", style = "Bold Italic"  }
-size = 10.5
+size = 11.5
 
 [font.offset]
 x = 0
