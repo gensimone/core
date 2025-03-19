@@ -1,31 +1,32 @@
 #!/bin/bash
 
-CWD="$(pwd)"
-
-check_repository() {
+check_repo() {
   if ! [ -d "$1" ] || ! [ -d "$1/.git" ]; then
     echo "Provide a local git repository" >&2
     exit 1
   fi
 
-  if ! cd "$1"; then
-    echo "Cannot cd in $0" >&2
-    echo "Missing execution permissions ?" >&2
-    exit 1
-  fi
+  # if ! cd "$1"; then
+  #   echo "Cannot cd in $0" >&2
+  #   echo "Missing execution permissions ?" >&2
+  #   exit 1
+  # fi
 
-  if ! [ "$(git remote)" ]; then
-    echo "Missing remote server" >&2
-    cd "$CWD" && exit 1 || exit 1 # just for the LSP
+  if ! [ "$(git -C "$1" remote)" ]; then
+    echo "Missing remote server: $1" >&2
   fi
 }
 
 if [ "$1" ]; then
-  check_repository "$1"
+  repo="$1"
 else
-  check_repository "$HOME/Notes"
+  repo="$HOME/Notes"
 fi
 
-git pull && $EDITOR . && git add . && git commit && git push
+check_repo "$repo"
 
-cd "$CWD" || exit 1
+git -C "$repo" pull &&
+  $EDITOR "$repo" &&
+  git -C "$repo" add . &&
+  git -C "$repo" commit &&
+  git -C "$repo" push
