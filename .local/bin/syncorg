@@ -1,32 +1,45 @@
 #!/bin/bash
 
+# .d88888b  dP    dP 888888ba   a88888b.  .88888.   888888ba   .88888.
+# 88.    "' Y8.  .8P 88    `8b d8'   `88 d8'   `8b  88    `8b d8'   `88
+# `Y88888b.  Y8aa8P  88     88 88        88     88 a88aaaa8P' 88
+#       `8b    88    88     88 88        88     88  88   `8b. 88   YP88
+# d8'   .8P    88    88     88 Y8.   .88 Y8.   .8P  88     88 Y8.   .88
+#  Y88888P     dP    dP     dP  Y88888P'  `8888P'   dP     dP  `88888'
+#
+
+# Author: Simone Gentili (gensimone)
+
+notes="$HOME/Notes"
+journal="$HOME/Journal"
+
+repo=$notes
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -j|--journal)
+      args="Neorg journal custom"
+      repo="$journal"
+      shift
+      ;;
+    *)
+      echo "Invalid argument: $1" >&2 && exit 1
+      ;;
+  esac
+done
+
 check_repo() {
   if ! [ -d "$1" ] || ! [ -d "$1/.git" ]; then
-    echo "Provide a local git repository" >&2
-    exit 1
+    echo "Provide a local git repository" >&2 && exit 1
   fi
-
-  # if ! cd "$1"; then
-  #   echo "Cannot cd in $0" >&2
-  #   echo "Missing execution permissions ?" >&2
-  #   exit 1
-  # fi
-
   if ! [ "$(git -C "$1" remote)" ]; then
-    echo "Missing remote server: $1" >&2
+    echo "Missing remote server: $1" >&2 && exit 1
   fi
 }
-
-if [ "$1" ]; then
-  repo="$1"
-else
-  repo="$HOME/Notes"
-fi
 
 check_repo "$repo"
 
 git -C "$repo" pull &&
-  $EDITOR "$repo" &&
+  $EDITOR "$repo" -c "$args" &&
   git -C "$repo" add . &&
   git -C "$repo" commit &&
   git -C "$repo" push
