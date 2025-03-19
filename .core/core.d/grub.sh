@@ -16,4 +16,11 @@ GRUB_DISTRIBUTOR="Void"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"
 EOF
 
-sudo update-grub
+if which update-grub; then
+  sudo update-grub
+elif which grub-mkconfig; then
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
+else
+  echo "Missing update-grub/grub-mkconfig in PATH" >&2
+  exit 1
+fi
