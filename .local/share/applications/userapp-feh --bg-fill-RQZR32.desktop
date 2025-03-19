@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=set as wallpaper
+Exec=feh --bg-fill %f
+Categories=Other;
+NoDisplay=true
+MimeType=image/png
+Terminal=false
