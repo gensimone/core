@@ -26,6 +26,6 @@ else
   check_repository "$HOME/Notes"
 fi
 
-git pull && $EDITOR . && git add . && git commit -m 'Update' && git push
+git pull && $EDITOR . && git add . && git commit && git push
 
 cd "$CWD" || exit 1
