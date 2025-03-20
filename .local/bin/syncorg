@@ -14,6 +14,7 @@ notes="$HOME/Notes"
 journal="$HOME/Journal"
 
 repo=$notes
+args="Neorg index"
 while [[ $# -gt 0 ]]; do
   case $1 in
     -j|--journal)
@@ -39,7 +40,7 @@ check_repo() {
 check_repo "$repo"
 
 git -C "$repo" pull &&
-  $EDITOR "$repo" -c "$args" &&
+  $EDITOR -c "$args" &&
   git -C "$repo" add . &&
   git -C "$repo" commit &&
   git -C "$repo" push
