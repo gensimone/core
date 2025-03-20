@@ -16,6 +16,3 @@ success_symbol = '[](bold green)' # The 'success_symbol' segment is being set
 disabled = true
 
 scan_timeout = 1000
-
-[lua]
-format = 'via [ $version](bold blue) '
