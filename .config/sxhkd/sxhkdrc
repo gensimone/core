@@ -35,6 +35,10 @@ XF86MonBrightnessDown
 alt + Escape
 	slock
 
+# browser
+alt + ctrl + b
+  chromium
+
 # pulsemixer
 # --class pulsemixer is used to float the window in dwm
 alt + {ctrl,shift} + m
