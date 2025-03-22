@@ -9,12 +9,12 @@
 import = [ "~/.config/alacritty/gruvbox.toml" ]
 
 [window]
-opacity = 1.0
+opacity = 0.85
 decorations = "None"
 
 [window.padding]
-x = 10
-y = 0
+x = 20
+y = 20
 
 [font]
 normal = { family = "CascadiaCove NF", style = "Regular"  }
