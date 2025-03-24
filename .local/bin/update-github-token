@@ -1,0 +1,49 @@
+#!/bin/python
+
+import os
+from subprocess import run, PIPE
+
+
+def find_and_replace(
+    directory: str,
+    username: str,
+    token: str,
+    ignore: set[str]
+) -> None:
+    if (
+        not os.access(directory, os.X_OK)
+        or not os.access(directory, os.R_OK)
+        or directory in ignore
+    ):
+        return
+    for filename in os.listdir(directory):
+        path = os.path.join(directory, filename)
+        if os.path.isdir(path):
+            find_and_replace(path, username, token, ignore)
+        if filename == ".git":
+            proc = run(f'git -C {directory} remote --verbose', stdout=PIPE, shell=True)
+            remote_output = proc.stdout.decode()
+            if remote_output and username in remote_output:
+                remote_name, url = remote_output.split('\n')[0].split()[:2]
+                repository_name = url.split('/')[-1]
+                new_url = f'https://{username}:{token}@github.com/{username}/{repository_name}'
+                run(f'git -C {directory} remote set-url {remote_name} {new_url}', shell=True)
+                print(f':: {directory}')
+
+
+
+
+if __name__ == "__main__":
+    import sys
+    token = sys.argv[1]
+    username = 'gensimone'
+    home = os.path.expanduser('~')
+    find_and_replace(
+        "/home/void",
+        username=username,
+        token=token,
+        ignore={
+            f'{home}/.local/share',
+            f'{home}/.local/state'
+        },
+    )
