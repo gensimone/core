@@ -7,17 +7,17 @@
 
 # volume
 XF86AudioRaiseVolume
-	amixer sset 'Master' 10%+ && dwm-sb-update-module.sh volume
+	amixer sset 'Master' 10%+
 XF86AudioLowerVolume
-	amixer sset 'Master' 10%- && dwm-sb-update-module.sh volume
+	amixer sset 'Master' 10%-
 XF86AudioMute
-  amixer sset 'Master' 0% && dwm-sb-update-module.sh volume
+  amixer sset 'Master' 0%
 alt + {ctrl,shift} + i
-	amixer sset 'Master' 10%+ && dwm-sb-update-module.sh volume
+	amixer sset 'Master' 10%+
 alt + {ctrl,shift} + d
-	amixer sset 'Master' 10%- && dwm-sb-update-module.sh volume
+	amixer sset 'Master' 10%-
 # alt + {ctrl,shift} + m
-#   amixer sset 'Master' 0% && dwm-sb-update-module.sh volume
+#   amixer sset 'Master' 0%
 
 # screenshots
 alt + ctrl + s
@@ -43,7 +43,3 @@ alt + ctrl + b
 # --class pulsemixer is used to float the window in dwm
 alt + {ctrl,shift} + m
 	alacritty --class pulsemixer --command pulsemixer
-
-# boot session [full]
-alt + ctrl + b
-	boot-session-full
