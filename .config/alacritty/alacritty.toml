@@ -17,10 +17,10 @@ x = 20
 y = 20
 
 [font]
-normal = { family = "CascadiaCove NF", style = "Regular"  }
-bold = { family = "CascadiaCove NF", style = "Bold"  }
-italic = { family = "CascadiaCove NF", style = "Italic"  }
-bold_italic = { family = "CascadiaCove NF", style = "Bold Italic"  }
+normal = { family = "CaskaydiaCove NF", style = "Regular"  }
+bold = { family = "CaskaydiaCove NF", style = "Bold"  }
+italic = { family = "CaskaydiaCove NF", style = "Italic"  }
+bold_italic = { family = "CaskaydiaCove NF", style = "Bold Italic"  }
 size = 11.5
 
 [font.offset]
