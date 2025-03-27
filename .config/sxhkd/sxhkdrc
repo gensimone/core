@@ -37,7 +37,7 @@ alt + Escape
 
 # browser
 alt + ctrl + b
-  chromium
+  qutebrowser
 
 # pulsemixer
 # --class pulsemixer is used to float the window in dwm
