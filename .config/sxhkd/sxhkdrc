@@ -22,8 +22,6 @@ alt + {ctrl,shift} + d
 # screenshots
 alt + ctrl + s
 	maim --hidecursor -s ~/Pictures/Screenshots/screenshot-$(date +%H:%M:%S).png
-alt + ctrl + p
-	maim --hidecursor ~/Pictures/Screenshots/screenshot-$(date +%H:%M:%S).png
 
 # brightness
 XF86MonBrightnessUp
@@ -38,6 +36,10 @@ alt + Escape
 # browser
 alt + ctrl + b
   qutebrowser
+
+# password manager
+alt + ctrl + p
+  bwm -C
 
 # pulsemixer
 # --class pulsemixer is used to float the window in dwm
