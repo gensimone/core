@@ -1,3 +1,7 @@
+import subprocess
+from urllib.request import urlopen
+import os
+
 #  ██████╗ ██╗   ██╗████████╗███████╗
 # ██╔═══██╗██║   ██║╚══██╔══╝██╔════╝
 # ██║   ██║██║   ██║   ██║   █████╗
@@ -48,6 +52,74 @@ c.fonts.default_family = 'CaskaydiaCove NF'
 
 # Default font size to use
 c.fonts.default_size = '11.5pt'
+
+# Web pages font
+# c.fonts.web.size.default = '11.5pt'
+
+# Urls
+# Page(s) to open at the start.
+config.set("url.start_pages", [ "https://start.duckduckgo.com" ])
+# Search engines which can be used via the address bar
+config.set("url.searchengines", {
+    "DEFAULT": "https://duckduckgo.com/?q={}",
+    "pkg": "https://voidlinux.org/packages/?arch=x86_64&q={}",
+    "yt": "https://youtube.com/results?search_query={}",
+    "pb": "https://thepiratebay.org/search/{}"
+})
+
+#     with urlopen(theme) as themehtml:
+#         with open(config.configdir / "theme.py", "a") as file:
+#             file.writelines(themehtml.read().decode("utf-8"))
+#
+# if os.path.exists(config.configdir / "theme.py"):
+#     config.source('theme.py')
+
+# # Xresources
+# def read_xresources(prefix):
+#     """
+#     read settings from xresources
+#     """
+#     props = {}
+#     x = subprocess.run(["xrdb", "-query"], stdout=subprocess.PIPE)
+#     lines = x.stdout.decode().split("\n")
+#     for line in filter(lambda l: l.startswith(prefix), lines):
+#         prop, _, value = line.partition(":\t")
+#         props[prop] = value
+#     return props
+#
+# xresources = read_xresources("*")
+# c.colors.statusbar.normal.bg = xresources["*.background"]
+# c.colors.statusbar.command.bg = xresources["*.background"]
+# c.colors.statusbar.command.fg = xresources["*.foreground"]
+# c.colors.statusbar.normal.fg = xresources["*.foreground"]
+#
+# c.colors.tabs.even.bg = xresources["*.background"]
+# c.colors.tabs.odd.bg = xresources["*.background"]
+# c.colors.tabs.even.fg = xresources["*.foreground"]
+# c.colors.tabs.odd.fg = xresources["*.foreground"]
+# c.colors.tabs.selected.even.bg = xresources["*.color8"]
+# c.colors.tabs.selected.odd.bg = xresources["*.color8"]
+# c.colors.hints.bg = xresources["*.background"]
+# c.colors.hints.fg = xresources["*.foreground"]
+#
+# # change title format
+# c.tabs.title.format = "{audio}{current_title}"
+#
+# c.colors.tabs.indicator.stop = xresources["*.color14"]
+# c.colors.completion.odd.bg = xresources["*.background"]
+# c.colors.completion.even.bg = xresources["*.background"]
+# c.colors.completion.fg = xresources["*.foreground"]
+# c.colors.completion.category.bg = xresources["*.background"]
+# c.colors.completion.category.fg = xresources["*.foreground"]
+# c.colors.completion.item.selected.bg = xresources["*.background"]
+# c.colors.completion.item.selected.fg = xresources["*.foreground"]
+#
+# If not in light theme
+# if xresources["*.background"] != "#ffffff":
+#     # c.qt.args = ['blink-settings=darkMode=4']
+#     # c.colors.webpage.prefers_color_scheme_dark = True
+#     c.colors.webpage.darkmode.enabled = True
+#     c.hints.border = "1px solid #FFFFFF"
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
