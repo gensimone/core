@@ -6,7 +6,7 @@
 # ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
 
 [general]
-import = [ "~/.config/alacritty/pastel_dark.toml" ]
+import = [ "~/.config/alacritty/colorscheme.toml" ]
 
 [window]
 opacity = 1.0
