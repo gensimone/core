@@ -6,11 +6,11 @@
 # ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
 
 [general]
-import = [ "~/.config/alacritty/gruvbox.toml" ]
+import = [ "~/.config/alacritty/pastel_dark.toml" ]
 
 [window]
-opacity = 0.85
-decorations = "None"
+opacity = 1.0
+# decorations = "None"
 
 [window.padding]
 x = 20
