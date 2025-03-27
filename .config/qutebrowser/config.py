@@ -71,8 +71,8 @@ config.set("url.searchengines", {
 #         with open(config.configdir / "theme.py", "a") as file:
 #             file.writelines(themehtml.read().decode("utf-8"))
 #
-# if os.path.exists(config.configdir / "theme.py"):
-#     config.source('theme.py')
+if os.path.exists(config.configdir / "theme.py"):
+    config.source('theme.py')
 
 # # Xresources
 # def read_xresources(prefix):
