@@ -39,6 +39,15 @@ config.set("tabs.show", "multiple")
 # Backend to use to display websites
 config.set("backend", "webengine")
 
+# Require a confirmation before quitting the application.
+# Valid values:
+#   always
+#   multiple-tabs
+#   downloads
+#   never
+# FIXME: use ConfirmQuit.downloads
+# config.set("confirm_quit", "downloads")
+
 # When to show a changelog after qutebrowser was upgraded.
 # Valid values:
 #   major: Show changelog for major upgrades (e.g. v2.0.0 → v3.0.0).
@@ -48,13 +57,24 @@ config.set("backend", "webengine")
 config.set("changelog_after_upgrade", "patch")
 
 # Default font family to use
-c.fonts.default_family = 'CaskaydiaCove NF'
+c.fonts.default_family = 'Terminess Nerd Font'
 
 # Default font size to use
-c.fonts.default_size = '11.5pt'
+c.fonts.default_size = '15pt'
 
-# Web pages font
-# c.fonts.web.size.default = '11.5pt'
+# Web pages font size
+c.fonts.web.size.default = 20
+# c.fonts.web.size.default_fixed = 16
+# c.fonts.web.size.minimum = 16
+# c.fonts.web.size.minimum_logical = 16
+
+# Web pages font type
+c.fonts.web.family.cursive = "Terminess Nerd Font"
+c.fonts.web.family.fantasy = "Terminess Nerd Font"
+c.fonts.web.family.fixed = "Terminess Nerd Font"
+c.fonts.web.family.sans_serif = "Terminess Nerd Font"
+c.fonts.web.family.serif = "Terminess Nerd Font"
+c.fonts.web.family.standard = "Terminess Nerd Font"
 
 # Urls
 # Page(s) to open at the start.
@@ -67,12 +87,7 @@ config.set("url.searchengines", {
     "pb": "https://thepiratebay.org/search/{}"
 })
 
-#     with urlopen(theme) as themehtml:
-#         with open(config.configdir / "theme.py", "a") as file:
-#             file.writelines(themehtml.read().decode("utf-8"))
-#
-if os.path.exists(config.configdir / "theme.py"):
-    config.source('theme.py')
+config.source('colorscheme.py')
 
 # # Xresources
 # def read_xresources(prefix):
