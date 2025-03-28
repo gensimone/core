@@ -57,10 +57,10 @@ config.set("backend", "webengine")
 config.set("changelog_after_upgrade", "patch")
 
 # Default font family to use
-c.fonts.default_family = 'Terminess Nerd Font'
+c.fonts.default_family = 'DejaVuSansM Nerd Font'
 
 # Default font size to use
-c.fonts.default_size = '15pt'
+c.fonts.default_size = '12pt'
 
 # Web pages font size
 c.fonts.web.size.default = 20
@@ -69,12 +69,12 @@ c.fonts.web.size.default = 20
 # c.fonts.web.size.minimum_logical = 16
 
 # Web pages font type
-c.fonts.web.family.cursive = "Terminess Nerd Font"
-c.fonts.web.family.fantasy = "Terminess Nerd Font"
-c.fonts.web.family.fixed = "Terminess Nerd Font"
-c.fonts.web.family.sans_serif = "Terminess Nerd Font"
-c.fonts.web.family.serif = "Terminess Nerd Font"
-c.fonts.web.family.standard = "Terminess Nerd Font"
+c.fonts.web.family.cursive = "DejaVuSansM Nerd Font"
+c.fonts.web.family.fantasy = "DejaVuSansM Nerd Font"
+c.fonts.web.family.fixed = "DejaVuSansM Nerd Font"
+c.fonts.web.family.sans_serif = "DejaVuSansM Nerd Font"
+c.fonts.web.family.serif = "DejaVuSansM Nerd Font"
+c.fonts.web.family.standard = "DejaVuSansM Nerd Font"
 
 # Urls
 # Page(s) to open at the start.
