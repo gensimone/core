@@ -29,7 +29,7 @@ set notification-bg "FFFFFF"
 set notification-fg "000000"
 
 # Font
-set font "Terminess Nerd Font 15"
+set font "DejaVuSansM Nerd Font 12"
 
 
 # Shows or hides GUI elements.
