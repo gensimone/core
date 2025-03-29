@@ -62,7 +62,7 @@ config.set("changelog_after_upgrade", "patch")
 c.fonts.default_family = 'DejaVuSansM Nerd Font'
 
 # Default font size to use
-c.fonts.default_size = '10pt'
+c.fonts.default_size = '12pt'
 
 # Web pages font size
 c.fonts.web.size.default = 20
