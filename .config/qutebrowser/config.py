@@ -18,6 +18,8 @@ import os
 # Wheter to load autoconfig.yml or not.
 config.load_autoconfig(False)
 
+config.set("editor.command", ["alacritty", "-e", "nvim", "{file}"])
+
 # Render all web contents using a dark theme.
 config.set("colors.webpage.darkmode.enabled", True)
 
