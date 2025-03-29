@@ -81,78 +81,60 @@ c.colors.downloads.stop.bg = matrix['matrix15']
 c.colors.downloads.system.bg = 'none'
 
 # Background color for hints. Note that you can use a `rgba(...)` value
-# for transparency.
 c.colors.hints.bg = matrix['matrix13']
 
 # Font color for hints.
 c.colors.hints.fg = matrix['matrix0']
 
 # Font color for the matched part of hints.
-# Type: QssColor
 c.colors.hints.match.fg = matrix['matrix10']
 
 # Background color of the keyhint widget.
-# Type: QssColor
 c.colors.keyhint.bg = matrix['matrix1']
 
 # Text color for the keyhint widget.
-# Type: QssColor
 c.colors.keyhint.fg = matrix['matrix5']
 
 # Highlight color for keys to complete the current keychain.
-# Type: QssColor
 c.colors.keyhint.suffix.fg = matrix['matrix13']
 
 # Background color of an error message.
-# Type: QssColor
-c.colors.messages.error.bg = matrix['matrix11']
+c.colors.messages.error.bg = '#FF0000'
 
 # Border color of an error message.
-# Type: QssColor
-c.colors.messages.error.border = matrix['matrix11']
+c.colors.messages.error.border = '#FF0000'
 
 # Foreground color of an error message.
-# Type: QssColor
-c.colors.messages.error.fg = matrix['matrix5']
+c.colors.messages.error.fg = '#C7C7C7'
 
 # Background color of an info message.
-# Type: QssColor
 c.colors.messages.info.bg = matrix['matrix8']
 
 # Border color of an info message.
-# Type: QssColor
 c.colors.messages.info.border = matrix['matrix8']
 
 # Foreground color an info message.
-# Type: QssColor
 c.colors.messages.info.fg = matrix['matrix5']
 
 # Background color of a warning message.
-# Type: QssColor
 c.colors.messages.warning.bg = matrix['matrix12']
 
 # Border color of a warning message.
-# Type: QssColor
 c.colors.messages.warning.border = matrix['matrix12']
 
 # Foreground color a warning message.
-# Type: QssColor
 c.colors.messages.warning.fg = matrix['matrix5']
 
 # Background color for prompts.
-# Type: QssColor
-c.colors.prompts.bg = matrix['matrix2']
+c.colors.prompts.bg = '#000000'
 
 # Border used around UI elements in prompts.
-# Type: String
-c.colors.prompts.border = '1px solid ' + matrix['matrix0']
+c.colors.prompts.border = '1px solid ' + 'C7C7C7'
 
 # Foreground color for prompts.
-# Type: QssColor
-c.colors.prompts.fg = matrix['matrix5']
+c.colors.prompts.fg = '#C7C7C7'
 
 # Background color for the selected item in filename prompts.
-# Type: QssColor
 c.colors.prompts.selected.bg = matrix['matrix3']
 
 # Background color of the statusbar in caret mode.
