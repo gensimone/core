@@ -21,13 +21,7 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias gpt='tgpt -m'
-
-# Functions
-yt-download() {
-  source "$HOME/Venvs/yt-dlp/bin/activate"
-  yt-dlp "$@"
-  deactivate
-}
+alias installed-on="sudo tune2fs -l /dev/nvme0n1p3 | grep created | awk '{print \$3,\$4,\$5,\$6,\$7}'"
 
 # Enable starship
 eval "$(starship init bash)"
