@@ -10,7 +10,6 @@ import = [ "~/.config/alacritty/colorscheme.toml" ]
 
 [window]
 opacity = 1.0
-# decorations = "None"
 
 [window.padding]
 x = 20
