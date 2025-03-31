@@ -33,7 +33,7 @@ alt + ctrl + p
 
 # clipboard manager
 alt + ctrl + r
-  clipmenu -fn 'DejaVuSansM:size=12' -nb '#000000' -nf '#C7C7C7' -sb '#00F500' -sf '#000000'
+  clipmenu -fn 'DejaVuSansM:size=12' -nb '#121212' -nf '#C7C7C7' -sb '#12F512' -sf '#121212'
 
 # pulsemixer
 # --class pulsemixer is used to float the window in dwm
