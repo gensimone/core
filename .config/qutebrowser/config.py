@@ -88,6 +88,7 @@ config.set("url.searchengines", {
     "yt": "https://youtube.com/results?search_query={}",
     "pb": "https://thepiratebay.org/search/{}",
     "am": "https://amazon.com/s?k={}",
+    "arch": "https://wiki.archlinux.org/index.php?search={}",
     "wall": "https://alphacoders.com/search/view?q={}&type=wallpaper"
 })
 
