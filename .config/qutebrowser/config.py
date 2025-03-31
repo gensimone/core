@@ -89,7 +89,9 @@ config.set("url.searchengines", {
     "pb": "https://thepiratebay.org/search/{}",
     "am": "https://amazon.com/s?k={}",
     "arch": "https://wiki.archlinux.org/index.php?search={}",
-    "wall": "https://alphacoders.com/search/view?q={}&type=wallpaper"
+    "wall": "https://alphacoders.com/search/view?q={}&type=wallpaper",
+    "repo": "https://github.com/search?q={}&type=repositories",
+    "tran": "https://translate.google.com/?sl=en&tl=it&text={}&op=translate"
 })
 
 # Coloscheme
