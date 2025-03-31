@@ -22,7 +22,7 @@ matrix = {
 }
 
 # Background color of the completion widget category headers.
-c.colors.completion.category.bg = '#000000'
+c.colors.completion.category.bg = '#121212'
 
 # Top/Bottom border color of the completion widget category headers.
 c.colors.completion.category.border.bottom = '#C7C7C7'
@@ -32,35 +32,35 @@ c.colors.completion.category.border.top = '#C7C7C7'
 c.colors.completion.category.fg = '#C7C7C7'
 
 # Background color of the completion widget for even rows.
-c.colors.completion.even.bg = '#000000'
+c.colors.completion.even.bg = '#121212'
 
 # Background color of the completion widget for odd rows.
-c.colors.completion.odd.bg = '#000000'
+c.colors.completion.odd.bg = '#121212'
 
 # Text color of the completion widget.
 c.colors.completion.fg = '#C7C7C7'
 
 # Background color of the selected completion item.
-c.colors.completion.item.selected.bg = '#000000'
+c.colors.completion.item.selected.bg = '#121212'
 
 # Top/Bottom border color of the selected completion item.
 c.colors.completion.item.selected.border.bottom = '#C7C7C7'
 c.colors.completion.item.selected.border.top = '#C7C7C7'
 
 # Foreground color of the selected completion item.
-c.colors.completion.item.selected.fg = '#00F500'
+c.colors.completion.item.selected.fg = '#12F512'
 
 # Foreground color of the matched text in the completion.
-c.colors.completion.match.fg = '#00F500'
+c.colors.completion.match.fg = '#12F512'
 
 # Color of the scrollbar in completion view
-c.colors.completion.scrollbar.bg = '#000000'
+c.colors.completion.scrollbar.bg = '#121212'
 
 # Color of the scrollbar handle in completion view.
-c.colors.completion.scrollbar.fg = '#000000'
+c.colors.completion.scrollbar.fg = '#121212'
 
 # Background color for the download bar.
-c.colors.downloads.bar.bg = '#00F500'
+c.colors.downloads.bar.bg = '#12F512'
 
 # Background color for downloads with errors.
 c.colors.downloads.error.bg = '#FF0000'
@@ -126,7 +126,7 @@ c.colors.messages.warning.border = matrix['matrix12']
 c.colors.messages.warning.fg = matrix['matrix5']
 
 # Background color for prompts.
-c.colors.prompts.bg = '#000000'
+c.colors.prompts.bg = '#121212'
 
 # Border used around UI elements in prompts.
 c.colors.prompts.border = '1px solid ' + 'C7C7C7'
@@ -232,10 +232,10 @@ c.colors.statusbar.url.success.https.fg = matrix['matrix14']
 c.colors.statusbar.url.warn.fg = matrix['matrix12']
 
 # Background color of the tab bar.
-c.colors.tabs.bar.bg = '#000000'
+c.colors.tabs.bar.bg = '#121212'
 
 # Background color of unselected even tabs.
-c.colors.tabs.even.bg = '#000000'
+c.colors.tabs.even.bg = '#121212'
 
 # Foreground color of unselected even tabs.
 c.colors.tabs.even.fg = '#C7C7C7'
@@ -260,22 +260,22 @@ c.colors.tabs.indicator.error = matrix['matrix11']
 c.colors.tabs.indicator.system = 'none'
 
 # Background color of unselected odd tabs.
-c.colors.tabs.odd.bg = '#000000'
+c.colors.tabs.odd.bg = '#121212'
 
 # Foreground color of unselected odd tabs.
 c.colors.tabs.odd.fg = '#C7C7C7'
 
 # Background color of selected even tabs.
-c.colors.tabs.selected.even.bg = '#000000'
+c.colors.tabs.selected.even.bg = '#121212'
 
 # Foreground color of selected even tabs.
-c.colors.tabs.selected.even.fg = '#00F500'
+c.colors.tabs.selected.even.fg = '#12F512'
 
 # Background color of selected odd tabs.
-c.colors.tabs.selected.odd.bg = '#000000'
+c.colors.tabs.selected.odd.bg = '#121212'
 
-# Foreground color of selected 00F500odd tabs.
-c.colors.tabs.selected.odd.fg = '#00F500'
+# Foreground color of selected 12F512odd tabs.
+c.colors.tabs.selected.odd.fg = '#12F512'
 
 # Background color for webpages if unset (or empty to use the theme's color)
 c.colors.webpage.bg = 'black'
