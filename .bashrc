@@ -32,9 +32,4 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-o () {
-    choice=$(fzf)
-    if [ -n $choice ]; then
-        nvim $choice
-    fi
-}
+eval "$(fzf --bash)"
