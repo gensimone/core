@@ -16,7 +16,8 @@ return {
                     }
                 },
                 layout_config = {
-                    height = 0.5
+                    height = 0.35,
+                    preview_cutoff = 9999999,
                 }
             },
             pickers = {
