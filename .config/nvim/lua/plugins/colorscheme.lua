@@ -8,7 +8,7 @@ return {
             -- `auto` will automatically set style based on background set with vim.o.background
             style = "auto",
             variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
-            transparent = false, -- Transparent background (as supported by the terminal)
+            transparent = true, -- Transparent background (as supported by the terminal)
             dim_inactive = false, -- "non-current" windows are dimmed
             hide_inactive_statusline = false, -- Hide statuslines on inactive windows. Works with the standard **StatusLine**, **LuaLine** and **mini.statusline**
             line_nr_column_background = false, -- Distinct background colors in line number column. `false` will disable background color and fallback to Normal background

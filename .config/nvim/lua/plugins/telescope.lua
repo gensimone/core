@@ -30,7 +30,7 @@ return {
                 },
                 find_files = {
                     find_command = {
-                        "fdfind",
+                        "fd",
                         "--type", "f",
                         "--type", "d",
                         "--hidden",
