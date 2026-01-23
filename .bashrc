@@ -13,6 +13,8 @@ append_path() {
 append_path $HOME/.cargo/bin
 append_path $HOME/.local/bin
 
+PS1="[\u@\h \W]\\$ "
+
 set -o ignoreeof # Same as setting IGNOREEOF=10
 set -o vi
 
