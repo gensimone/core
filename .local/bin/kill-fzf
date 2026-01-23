@@ -1,7 +1,0 @@
-#!/bin/sh
-
-PID=$(ps -e | tail -n +2 | awk '{print $1 " " $NF}' | fzf | cut -d ' ' -f 1)
-
-if ! [ -z $PID ]; then
-    kill $PID
-fi
