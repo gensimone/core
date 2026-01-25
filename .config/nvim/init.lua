@@ -68,8 +68,9 @@ require("lazy").setup({
   change_detection = { enabled = false }
 })
 
-local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
+
+-- Telescope
 local telescope_builtin = require('telescope.builtin')
 keymap('n', '<leader>ff', telescope_builtin.find_files)
 keymap('n', '<leader>fr', telescope_builtin.oldfiles)
@@ -79,6 +80,8 @@ keymap('n', '<leader>fh', telescope_builtin.help_tags)
 keymap('n', '<leader>fm', function() telescope_builtin.man_pages({ sections = { 'ALL' } }) end)
 keymap('n', '<leader>fc', function() telescope_builtin.find_files({ cwd = vim.fn.stdpath('config') }) end)
 keymap('n', '<leader>ds', telescope_builtin.diagnostics)
+
+-- Various stuff
 keymap('n', '<leader>bd', ':bd<CR>')
 keymap('n', '<leader>n', ':bn<CR>')
 keymap('n', '<leader>p', ':bp<CR>')
@@ -86,9 +89,26 @@ keymap('n', '<leader>e', ':Oil<CR>')
 keymap('n', '<leader>g', ':Neogit<CR>')
 keymap('n', '<leader>r', ':lua vim.lsp.buf.rename()<CR>')
 keymap('n', '<leader>y', '"+y')
+keymap('n', '<leader>t', ':term<CR>')
+keymap({'n', 'x'}, "gz", "<Cmd>MultipleCursorsAddMatches<CR>")
+keymap({'n', 'x'}, "<C-n>", "<Cmd>MultipleCursorsAddJumpNextMatch<CR>")
+
+-- Terminal
+local opts = { noremap = true, silent = true }
+keymap("t", "<Esc>", [[<C-\><C-n>]], opts)
 keymap('t', '<C-h>', [[<C-\><C-n><C-w>h]], opts)
 keymap('t', '<C-j>', [[<C-\><C-n><C-w>j]], opts)
 keymap('t', '<C-k>', [[<C-\><C-n><C-w>k]], opts)
 keymap('t', '<C-l>', [[<C-\><C-n><C-w>l]], opts)
-keymap({'n', 'x'}, "gz", "<Cmd>MultipleCursorsAddMatches<CR>")
-keymap({'n', 'x'}, "<C-n>", "<Cmd>MultipleCursorsAddJumpNextMatch<CR>")
+keymap("t", "<A-h>", [[<C-\><C-n><C-w><]], opts)
+keymap("t", "<A-l>", [[<C-\><C-n><C-w>>]], opts)
+keymap("t", "<A-j>", [[<C-\><C-n><C-w>-]], opts)
+keymap("t", "<A-k>", [[<C-\><C-n><C-w>+]], opts)
+vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
+    pattern = { "*" },
+    callback = function()
+        if vim.opt.buftype:get() == "terminal" then
+            vim.cmd(":startinsert")
+        end
+    end
+})
