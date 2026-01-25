@@ -1,4 +1,4 @@
--o "~/Music/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
+-o "~/music/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
 --embed-metadata
 --embed-thumbnail
 -t mp3
