@@ -25,6 +25,7 @@ export VISUAL=vi
 export EDITOR=nvim
 export PROMPT_COMMAND="echo"
 export PYTHON_BASIC_REPL=1
+export FZF_DEFAULT_COMMAND='fd --hidden --follow --type f --strip-cwd-prefix --exclude .git'
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
