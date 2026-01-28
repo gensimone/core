@@ -1,9 +1,11 @@
+# various hidden directories
 .cache/
 .cargo/
-.local/state/
 .local/share/
+.local/state/
 .mozilla/
 .npm/
+.pki/
 .rustup/
 .steam/
 .var/
