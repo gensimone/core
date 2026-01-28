@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-local opt = vim.opt
+local opt= vim.opt
 local cmd = vim.cmd
 local diagnostic = vim.diagnostic.config
 opt.cursorline = false
@@ -41,10 +41,9 @@ opt.termguicolors = true
 opt.undofile = true
 opt.updatetime = 300
 opt.wrap = false
-cmd("set shm+=I")
 cmd("set noshowmode")
 cmd("set noshowcmd")
-cmd("colorscheme lunaperche")
+cmd("colorscheme default")
 cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 diagnostic({ underline = false })
 
@@ -95,7 +94,7 @@ keymap({'n', 'x'}, "<C-n>", "<Cmd>MultipleCursorsAddJumpNextMatch<CR>")
 
 -- Terminal
 local opts = { noremap = true, silent = true }
-keymap("t", "<Esc>", [[<C-\><C-n>]], opts)
+keymap("t", "<Esc><Esc>", [[<C-\><C-n>]], opts)
 keymap('t', '<C-h>', [[<C-\><C-n><C-w>h]], opts)
 keymap('t', '<C-j>', [[<C-\><C-n><C-w>j]], opts)
 keymap('t', '<C-k>', [[<C-\><C-n><C-w>k]], opts)
