@@ -1,9 +1,12 @@
 .cache/
 .cargo/
 .local/state/
+.local/share/
 .mozilla/
 .npm/
+.rustup/
 .steam/
+.var/
 
 # home directories
 codes/
