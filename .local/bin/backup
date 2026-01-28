@@ -16,6 +16,7 @@ rsync \
 	--partial \
 	--progress \
 	--verbose \
+    --delete \
 	-hhh \
 	/home/simone/codes \
 	/home/simone/documents \
