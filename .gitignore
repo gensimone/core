@@ -4,3 +4,15 @@
 .mozilla/
 .npm/
 .steam/
+
+# home directories
+codes/
+desktop/
+documents/
+downloads/
+music/
+pictures/
+public/
+templates/
+vault/
+videos/
