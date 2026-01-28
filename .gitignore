@@ -1,0 +1,6 @@
+.cache/
+.cargo/
+.local/state/
+.mozilla/
+.npm/
+.steam/
