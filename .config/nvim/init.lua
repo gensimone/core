@@ -67,7 +67,9 @@ require("lazy").setup({
   change_detection = { enabled = false }
 })
 
+-- Keymaps
 local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 -- Telescope
 local telescope_builtin = require('telescope.builtin')
@@ -91,9 +93,9 @@ keymap('n', '<leader>y', '"+y')
 keymap('n', '<leader>t', ':term<CR>')
 keymap({'n', 'x'}, "gz", "<Cmd>MultipleCursorsAddMatches<CR>")
 keymap({'n', 'x'}, "<C-n>", "<Cmd>MultipleCursorsAddJumpNextMatch<CR>")
+keymap('', 'f', function() require('hop').hint_char1({ current_line_only = false}) end, opts)
 
 -- Terminal
-local opts = { noremap = true, silent = true }
 keymap("t", "<Esc><Esc>", [[<C-\><C-n>]], opts)
 keymap('t', '<C-h>', [[<C-\><C-n><C-w>h]], opts)
 keymap('t', '<C-j>', [[<C-\><C-n><C-w>j]], opts)
