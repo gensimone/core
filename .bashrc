@@ -1,10 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
 append_path() {
 	case ":$PATH:" in
 	*:"$1":*) ;;
