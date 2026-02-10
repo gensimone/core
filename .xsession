@@ -1,5 +1,6 @@
-batsignal -b
-picom -b
+batsignal &
+clipmenud &
+picom &
 slstatus &
 sxhkd &
-~/.fehbg
+~/.fehbg &
