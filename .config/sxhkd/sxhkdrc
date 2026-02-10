@@ -1,0 +1,8 @@
+XF86AudioRaiseVolume
+    amixer sset Master 5+
+alt + i
+    amixer sset Master 5+
+XF86AudioLowerVolume
+    amixer sset Master 5-
+alt + u
+    amixer sset Master 5-
