@@ -6,3 +6,13 @@ XF86AudioLowerVolume
     amixer sset Master 5-
 alt + u
     amixer sset Master 5-
+XF86AudioMute
+    pulsemixer --toggle-mute
+alt + m
+    pulsemixer --toggle-mute
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+alt + c
+    clipmenu
