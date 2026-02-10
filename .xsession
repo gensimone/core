@@ -1,2 +1,3 @@
-~/.local/bin/statusbar &
 picom -b
+slstatus &
+~/.fehbg
