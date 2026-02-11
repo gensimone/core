@@ -18,12 +18,14 @@ libnotify
 lightdm
 lightdm-gtk-greeter
 lxappearance
+lxsession
 make
 man-db
 neovim
 nmap
 picom
 pkg-config
+polkit
 pulseaudio
 pulsemixer
 python
