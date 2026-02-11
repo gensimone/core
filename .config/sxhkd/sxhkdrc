@@ -16,3 +16,9 @@ XF86MonBrightnessDown
     brightnessctl set 10%-
 alt + c
     clipmenu
+alt + d
+    dmenu-docs
+alt + a
+    dmenu-dict
+alt + shift + k
+    dmenu-kill
