@@ -21,5 +21,6 @@ rsync \
 	/home/simone/codes \
 	/home/simone/documents \
 	/home/simone/music \
+	/home/simone/pictures \
 	/home/simone/vault \
     $1
