@@ -47,6 +47,7 @@ valgrind
 vim
 virt-manager
 vlc
+vlc-plugin-ffmpeg
 wget
 xclip
 xorg
