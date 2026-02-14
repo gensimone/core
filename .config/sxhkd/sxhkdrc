@@ -1,0 +1,26 @@
+XF86AudioRaiseVolume
+    pulsemixer --set-volume $(($(pulsemixer --get-volume | cut -d ' ' -f 1)+5))
+alt + i
+    pulsemixer --set-volume $(($(pulsemixer --get-volume | cut -d ' ' -f 1)+5))
+XF86AudioLowerVolume
+    pulsemixer --set-volume $(($(pulsemixer --get-volume | cut -d ' ' -f 1)-5))
+alt + u
+    pulsemixer --set-volume $(($(pulsemixer --get-volume | cut -d ' ' -f 1)-5))
+XF86AudioMute
+    pulsemixer --toggle-mute
+alt + m
+    pulsemixer --toggle-mute
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+alt + c
+    clipmenu
+alt + Escape
+    slock
+alt + d
+    ~/.local/bin/dmenu-docs
+alt + a
+    ~/.local/bin/dmenu-dict
+alt + shift + k
+    ~/.local/bin/dmenu-kill
