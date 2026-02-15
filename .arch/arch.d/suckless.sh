@@ -6,13 +6,11 @@ DMENU="https://github.com/gensimone/dmenu"
 SLSTATUS="https://github.com/gensimone/slstatus"
 
 install() {
-    if ! git clone $1 $2 && make -C $2 && rm -rfv $2; then
-        echo "Aborted." >&2
-        exit 1
-    fi
+    git clone --depth=1 $1 $2 && sudo make clean install -C $2 && rm -rfv $2
+    [ $? -gt 0 ] && echo "Aborted." >&2 && exit 1
 }
 
-#       repo     pkg name
+#       repo      pkg name
 install $DWM      dwm
 install $ST       st
 install $DMENU    dmenu
