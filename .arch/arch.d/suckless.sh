@@ -15,3 +15,12 @@ install $DWM      dwm
 install $ST       st
 install $DMENU    dmenu
 install $SLSTATUS slstatus
+
+sudo mkdir -vp /usr/share/xsessions
+cat <<EOF | sudo tee /usr/share/xsessions/dwm.desktop 1>/dev/null
+[Desktop Entry]
+Name=dwm
+Exec=dwm
+Type=XSession
+Icon=dwm
+EOF
