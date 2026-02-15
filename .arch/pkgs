@@ -6,6 +6,7 @@ clang
 clipmenu
 cmus
 dhcpcd
+dosfstools
 dunst
 fd
 feh
