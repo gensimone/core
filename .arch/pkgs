@@ -17,6 +17,8 @@ irssi
 iwd
 libmad
 libnotify
+libxft
+libxinerama
 lightdm
 lightdm-gtk-greeter
 lxappearance
