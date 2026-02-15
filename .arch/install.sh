@@ -37,5 +37,5 @@ exec_func "$ROOT/groups"               create_group
 exec_func "$ROOT/groups"               add_user_to_group
 
 for file in $ROOT/arch.d/*.sh; do
-    ./"$file"
+    . "$file"
 done
