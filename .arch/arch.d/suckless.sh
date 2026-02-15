@@ -2,7 +2,7 @@
 
 check_dep() {
     if ! command -v $1 >/dev/null 2>&1; then
-        printf "%s could not be found" $1 >&2
+        printf "%s could not be found\n" $1 >&2
         exit 1
     fi
 }
