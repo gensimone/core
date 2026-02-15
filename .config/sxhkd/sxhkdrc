@@ -19,7 +19,7 @@ alt + c
 alt + Escape
     slock
 alt + d
-    ~/.local/bin/dmenu-docs
+    ~/.local/bin/dmenu-books
 alt + a
     ~/.local/bin/dmenu-dict
 alt + shift + k
