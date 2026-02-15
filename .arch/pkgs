@@ -43,6 +43,7 @@ ripgrep
 slock
 sxhkd
 tmux
+translate-shell
 tree
 ttf-jetbrains-mono-nerd
 tuned
