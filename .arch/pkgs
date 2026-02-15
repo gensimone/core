@@ -40,6 +40,7 @@ qbittorrent
 qemu-img
 qemu-system-x86
 ripgrep
+slock
 sxhkd
 tmux
 tree
