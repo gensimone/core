@@ -23,12 +23,17 @@ enable_system_wide_service() {
     sudo systemctl enable $1
 }
 
+create_group() {
+    sudo groupadd $1
+}
+
 add_user_to_group() {
   sudo usermod -aG "$1" "$USER"
 }
 
 exec_func "$ROOT/user-services"        enable_user_service
 exec_func "$ROOT/system-wide-services" enable_system_wide_service
+exec_func "$ROOT/groups"               create_group
 exec_func "$ROOT/groups"               add_user_to_group
 
 for file in $ROOT/arch.d/*.sh; do
