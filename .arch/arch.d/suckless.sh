@@ -13,7 +13,7 @@ install() {
 }
 
 #       repo     pkg name
-install dwm      dwm
-install st       st
-install dmenu    dmenu
-install slstatus slstatus
+install $DWM      dwm
+install $ST       st
+install $DMENU    dmenu
+install $SLSTATUS slstatus
