@@ -29,6 +29,7 @@ make
 man-db
 man-pages
 neovim
+newsboat
 nmap
 picom
 pkg-config
@@ -41,6 +42,7 @@ qbittorrent
 qemu-img
 qemu-system-x86
 ripgrep
+rustup
 slock
 sxhkd
 tmux
