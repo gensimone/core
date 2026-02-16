@@ -10,9 +10,6 @@ if ! [ -b $1 ]; then
     exit 1
 fi
 
-alias luks_close="sudo cryptsetup luksClose encrypted"
-alias umount_luks_close="sudo umount -v ~/external && luks_close"
-
 if ls /dev/mapper/encrypted >/dev/null 2>&1; then
     read -p "/dev/mapper/encrypted already exist. Continue anyway? [y/n]: " answer
     if [ "$answer" != "Y" ] && [ "$answer" != "y" ]; then
@@ -23,14 +20,16 @@ else
     sudo cryptsetup luksOpen $1 encrypted || exit 1
 fi
 
+
+
 sudo mount --mkdir /dev/mapper/encrypted ~/external || {
-    luks_close;
+    sudo cryptsetup luksClose encrypted
     echo "Aborted." >&2;
     exit 1
 }
 
 mkdir -pv ~/external/backup && backup ~/external/backup || {
-    umount_luks_close;
+    sudo umount -v ~/external && sudo cryptsetup luksClose encrypted
     echo "Aborted." >&2;
     exit 1
 }
