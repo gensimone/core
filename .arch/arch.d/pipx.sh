@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pipx install yt-fzf yt-dlp
+pipx install yt-fzf yt-dlp poetry
