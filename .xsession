@@ -1,6 +1,6 @@
 lxsession &
 picom &
-slstatus &
 sxhkd &
 xss-lock -- slock &
 ~/.fehbg &
+~/.local/bin/bar &
