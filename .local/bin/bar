@@ -2,6 +2,6 @@
 
 
 while true; do
-    xsetroot -name "$(date)"
-    sleep 1
+    xsetroot -name "$(date +'%A %d %H:%M'), $(acpi)"
+    sleep 60
 done
