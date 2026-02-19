@@ -15,6 +15,7 @@ fzf
 gcc
 gdb
 git
+ifuse
 irssi
 iwd
 libmad
@@ -58,6 +59,7 @@ vlc
 vlc-plugin-ffmpeg
 wget
 xclip
+xfce4-screenshoter
 xorg
 xss-lock
 zathura
